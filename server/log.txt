@@ -1,0 +1,9 @@
+2/23/2023, 9:44:00 PM — GET request on /api/auth/login 
+2/23/2023, 10:51:22 PM — POST request on /api/auth/register 
+2/23/2023, 10:52:00 PM — POST request on /api/auth/register 
+2/23/2023, 10:52:18 PM — POST request on /api/auth/register 
+2/23/2023, 10:52:38 PM — POST request on /api/auth/register 
+2/23/2023, 10:54:05 PM — POST request on /api/auth/register 
+2/23/2023, 11:02:48 PM — POST request on /api/auth/login 
+2/23/2023, 11:03:18 PM — POST request on /api/auth/login 
+2/23/2023, 11:14:48 PM — POST request on /api/auth/login 
