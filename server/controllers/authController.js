@@ -15,10 +15,10 @@ const login = async (req, res) => {
 };
 
 const register = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, fname } = req.body;
 
   try {
-    const user = await Auth.signup(email, password);
+    const user = await Auth.signup(email, password, fname);
     res.status(201).json({
       message: "Success created an account",
       email,
