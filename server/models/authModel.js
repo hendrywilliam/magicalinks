@@ -53,9 +53,9 @@ authSchema.statics.signup = async function (email, password, fname) {
 authSchema.statics.login = async function (email, password) {
   if (!email || !password) throw Error("All field must be filled.");
   const user = await this.findOne({ email });
-  if (!user) throw Error("Email is not exist.");
-  const checkPass = bcrypt.compare(password, user.password);
-  if (!checkPass) throw Error("Password incorrect.");
+  if (!user) throw Error("Incorrect email.");
+  const checkPass = await bcrypt.compare(password, user.password);
+  if (!checkPass) throw Error("Incorrect password.");
   return user;
 };
 
