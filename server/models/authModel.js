@@ -15,7 +15,7 @@ const authSchema = new Schema({
     required: true,
     minLength: [8, "Password must be atleast 8 characters."],
   },
-  fname: {
+  username: {
     type: String,
   },
   avatar: {
@@ -23,7 +23,7 @@ const authSchema = new Schema({
   },
 });
 
-authSchema.statics.signup = async function (email, password, fname) {
+authSchema.statics.signup = async function (email, password, username) {
   if (!email || !password) throw Error("All field must be filled.");
   if (!validator.isEmail(email)) throw Error("Email is not valid.");
   if (
@@ -44,7 +44,7 @@ authSchema.statics.signup = async function (email, password, fname) {
   const user = await this.create({
     email,
     password: hash,
-    fname: fname,
+    username,
     avatar: process.env.DEFAULT_PROFILE,
   });
   return user;

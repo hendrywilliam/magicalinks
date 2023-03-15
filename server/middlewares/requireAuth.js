@@ -10,7 +10,6 @@ const requireAuth = async (req, res, next) => {
   const token = authorization.split(" ")[1];
   try {
     const { _id } = jwt.verify(token, process.env.SECRET_JWT);
-
     /**
      * had to populate this before going through the protected route
      * req.user will be

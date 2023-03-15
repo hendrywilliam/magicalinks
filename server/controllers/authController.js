@@ -19,7 +19,7 @@ const login = async (req, res) => {
 };
 
 const register = async (req, res) => {
-  const { email, password, fname } = req.body;
+  const { email, password, username } = req.body;
 
   try {
     const user = await Auth.signup(email, password, fname);

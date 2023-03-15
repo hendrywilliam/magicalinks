@@ -11,6 +11,9 @@ const linkSchema = new Schema({
     type: String,
     required: true,
   },
+  username: {
+    type: String,
+  },
   user_id: {
     type: String,
     required: true,
